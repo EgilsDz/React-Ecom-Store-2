@@ -3,7 +3,8 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from "@mui/material/Typography";
-import { Link } from '@mui/material';
+import { Link as MuiLink } from '@mui/material';
+import { Link as RouterLink } from 'react-router-dom';
 
 
 
@@ -22,37 +23,57 @@ function Navbar() {
 
                <Box sx={{ flexGrow: 1 }} />
 
-               <Link to="/" color="inherit" underline="none"
+               <MuiLink
+                  component={RouterLink}
+                  to="/"
+                  color="inherit"
+                  underline="none"
                   sx={{
                      ml: 3,
                      cursor: "pointer",
-                  }}>
+                  }}
+               >
                   Home
-               </Link>
+               </MuiLink>
 
-               <Link to="/" color="inherit" underline="none"
+               <MuiLink
+                  component={RouterLink}
+                  to="/products"
+                  color="inherit"
+                  underline="none"
                   sx={{
                      ml: 3,
                      cursor: "pointer",
-                  }}>
+                  }}
+               >
                   Products
-               </Link>
+               </MuiLink>
 
-               <Link to="/Contact" color="inherit" underline="none"
+               <MuiLink
+                  component={RouterLink}
+                  to="/contact"
+                  color="inherit"
+                  underline="none"
                   sx={{
                      ml: 3,
                      cursor: "pointer",
-                  }}>
+                  }}
+               >
                   Contact us
-               </Link>
+               </MuiLink>
 
-               <Link href="/" color="inherit" underline="none"
+               <MuiLink
+                  component={RouterLink}
+                  to="/cart"
+                  color="inherit"
+                  underline="none"
                   sx={{
                      ml: 3,
                      cursor: "pointer",
-                  }}>
+                  }}
+               >
                   Cart
-               </Link>
+               </MuiLink>
             </Toolbar>
          </AppBar>
       </Box>
