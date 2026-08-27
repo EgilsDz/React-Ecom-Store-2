@@ -16,7 +16,9 @@ function ProductModal({ open, onClose, selectedProduct }) {
         price: selectedProduct?.price || "",
         year: selectedProduct?.year || "",
         RAM: selectedProduct?.RAM || "",
-        warranty_period: selectedProduct?.warranty_period || ""
+        warranty_period: selectedProduct?.warranty_period || "",
+        image: selectedProduct?.image || "",
+        features: selectedProduct?.features || [],
     });
 
     const isEditing = !!selectedProduct

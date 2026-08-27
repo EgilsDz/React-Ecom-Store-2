@@ -2,7 +2,7 @@ import { Button, Menu, MenuItem } from '@mui/material';
 import { useState } from 'react';
 import { ProductMenuStyles } from './ProductMenuStyles';
 
-function ProductMenu({ product, onEdit, onDelete }) {
+function ProductMenu({ product, onEdit, onDelete, sx }) {
 
     const [anchorEl, setAnchorEl] = useState(null);
 
@@ -15,7 +15,7 @@ function ProductMenu({ product, onEdit, onDelete }) {
     };
     return (
         <>
-            <Button variant="outlined" sx={ProductMenuStyles.button} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Menu</Button>
+            <Button variant="outlined" sx={{ ...ProductMenuStyles.button, ...sx }} aria-controls="simple-menu" aria-haspopup="true" onClick={handleClick}>Menu</Button>
             <Menu
                 sx={ProductMenuStyles.menu}
                 id="simple-menu"

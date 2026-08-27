@@ -1,7 +1,7 @@
 import Card from '@mui/material/Card';
 import { useNavigate } from 'react-router-dom';
 import CardContent from '@mui/material/CardContent';
-import { Typography, Button, Box, } from '@mui/material';
+import { Typography, Button, Box, Skeleton } from '@mui/material';
 import { ProductCardStyles } from './ProductCardStyles';
 import ProductMenu from '../ProductMenu/ProductMenu';
 
@@ -13,7 +13,7 @@ const images = import.meta.glob(
         query: "?url",
         import: "default",
     }
-);
+)
 
 
 function ProductCard({ title, price, description, image, id, onEdit, product, onDelete }) {
@@ -25,7 +25,18 @@ function ProductCard({ title, price, description, image, id, onEdit, product, on
             <CardContent sx={ProductCardStyles.cardContent}>
                 <Typography variant="body1" sx={ProductCardStyles.title} >{title}</Typography>
                 <Typography sx={ProductCardStyles.price} >Price: {price}$</Typography>
-                <img src={imagePath} alt={title} style={ProductCardStyles.image}></img>
+                {image ? (
+                    <img
+                        src={imagePath}
+                        alt={title}
+                        style={ProductCardStyles.image}
+                    />
+                ) : (
+                    <Skeleton
+                        animation="wave"
+                        sx={ProductCardStyles.Skeletonimage}
+                    />
+                )}
                 <Typography variant="body2" sx={ProductCardStyles.disc} >
                     {description}
                 </Typography>

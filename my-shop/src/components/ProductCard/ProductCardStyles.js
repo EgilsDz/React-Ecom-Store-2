@@ -17,6 +17,16 @@ export const ProductCardStyles = {
         marginBottom: "10px",
 
     },
+
+    Skeletonimage: {
+        width: "170px",
+        height: "125px",
+        objectFit: "contain",
+        alignSelf: "center",
+        marginTop: "10px",
+        marginBottom: "10px",
+
+    },
     title: {
         color: 'blue',
         fontSize: "13px",

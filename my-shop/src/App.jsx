@@ -6,8 +6,6 @@ import Details from "./pages/Details/Details"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 
 
-
-
 function App() {
   return (
     <BrowserRouter>
