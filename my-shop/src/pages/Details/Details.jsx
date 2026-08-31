@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
-import { Typography, Button, Box, Card, CardContent, Skeleton } from '@mui/material'
+import { Typography, Button, Box, Card, CardContent, Skeleton, } from '@mui/material'
 import { useParams, useNavigate } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { useEffect, useState } from "react";
@@ -9,6 +9,7 @@ import ProductMenu from "../../components/ProductMenu/ProductMenu";
 import { DetailsStyles } from "./DetailsStyles";
 import ProductModal from "../../components/ProductModal/ProductModal";
 import { deleteProducts } from "../../features/products/productsSlice";
+import { addToCart, decreaseQuantity, increaseQuantity } from "../../features/cart/cartSlice";
 
 const images = import.meta.glob(
     "../../assets/images/product_images/*.png",
@@ -25,11 +26,13 @@ function Details() {
     const navigate = useNavigate();
     let { id } = useParams();
     const products = useSelector(state => state.products.productItems)
+    const cart = useSelector(state => state.cart)
     const dispatch = useDispatch();
     useEffect(() => {
         dispatch(fetchProducts());
     }, [dispatch]);
     const product = products.find((product) => product.id == id)
+    const cartItem = cart.cartItems.find((cartItem) => cartItem.id == id)
 
     const handleClose = () => {
         setOpen(false);
@@ -41,10 +44,10 @@ function Details() {
 
     const handleDelete = async (product) => {
         try {
-            await dispatch(deleteProducts(product.id)).unwrap();
-            navigate("/products");
+            await dispatch(deleteProducts(product.id)).unwrap()
+            navigate("/products")
         } catch (error) {
-            console.log("Delete failed", error);
+            console.log("Delete failed", error)
         }
     };
 
@@ -82,7 +85,13 @@ function Details() {
                             <Box sx={DetailsStyles.buttonSection}>
                                 <ProductMenu sx={DetailsStyles.button} product={product} onEdit={handleEdit}
                                     onDelete={handleDelete} />
-                                <Button variant="contained" sx={DetailsStyles.button}>Add to cart</Button>
+                                {!cartItem ? (<Button variant="contained" sx={DetailsStyles.button} onClick={() => dispatch(addToCart(product))}>Add to cart</Button>) : (
+                                    <Box sx={DetailsStyles.quantitybox}>
+                                        <Button variant="outlined" sx={DetailsStyles.CartBtn} onClick={() => dispatch(decreaseQuantity(id))}>-</Button>
+                                        <Typography sx={DetailsStyles.quantity}>{cartItem.quantity} </Typography>
+                                        <Button variant="contained" sx={DetailsStyles.CartBtn} onClick={() => dispatch(increaseQuantity(id))}>+</Button>
+                                    </Box>
+                                )}
                             </Box>
                         </Box>
                         <Box sx={DetailsStyles.RightSection}>

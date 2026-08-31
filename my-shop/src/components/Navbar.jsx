@@ -5,10 +5,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Typography from "@mui/material/Typography";
 import { Link as MuiLink } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 
 function Navbar() {
+
+   const { amount } = useSelector((state) => state.cart)
    return (
       <Box sx={{ flexGrow: 1 }}>
          <AppBar position="static">
@@ -72,7 +75,7 @@ function Navbar() {
                      cursor: "pointer",
                   }}
                >
-                  Cart
+                  Cart({amount})
                </MuiLink>
             </Toolbar>
          </AppBar>

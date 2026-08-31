@@ -26,6 +26,7 @@ export const DetailsStyles = {
 
     buttonSection: {
         display: "flex",
+        alignItems: "center",
         gap: 4,
         mt: 4,
     },
@@ -82,6 +83,7 @@ export const DetailsStyles = {
         height: "32px",
         fontSize: "12px",
         padding: "4px 10px"
+
     },
 
     desc: {
@@ -91,6 +93,25 @@ export const DetailsStyles = {
 
     Specstext: {
         fontWeight: "bold",
-    }
+    },
+
+    CartBtn: {
+        height: "32px",
+        minWidth: "15px",
+        fontSize: "25px"
+    },
+
+    quantity: {
+        fontSize: "25px",
+        fontWeight: "bold",
+    },
+
+    quantitybox: {
+        display: "flex",
+        alignItems: "center",
+        gap: 2
+    },
+
+
 
 };
