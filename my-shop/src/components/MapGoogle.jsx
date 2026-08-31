@@ -13,7 +13,7 @@ function MapGoogle() {
             <Map
                 defaultCenter={startPosition}
                 defaultZoom={12}
-                style={{ width: "500px", height: "190px" }}
+                style={{ width: "100%", height: "190px" }}
             >
                 <Marker position={startPosition} />
             </Map>

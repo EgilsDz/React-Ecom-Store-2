@@ -34,7 +34,7 @@ function Cart() {
             <Box>
                 <Navbar />
                 <Box sx={CartStyles.titleBox}>
-                    <Typography sx={CartStyles.title} variant="h5">Shopping Cart</Typography>
+                    <Typography variant="h5">Shopping Cart</Typography>
                     <Typography sx={CartStyles.itemTotal} variant="h5">Total:{cart.total.toFixed(2)}$
 
                     </Typography>

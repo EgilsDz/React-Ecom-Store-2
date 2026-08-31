@@ -1,8 +1,9 @@
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
+import { ProductsStyles } from "./ProductsStyles"
 import ProductModal from "../../components/ProductModal/ProductModal"
 import { Button, Box, } from "@mui/material"
-import ProductList from "../../components/ProductList"
+import ProductList from "../../components/ProductList/ProductList"
 import { useState } from "react"
 import { useDispatch } from "react-redux"
 import { deleteProducts } from "../../features/products/productsSlice"
@@ -33,21 +34,24 @@ function Products() {
 
 
     return (
-        <div>
+        <Box sx={ProductsStyles.page}>
             <Navbar />
-            <Box sx={{ display: "flex", justifyContent: "flex-end", mr: 10, mb: 10, mt: 5 }}>
-                <Button variant="contained" onClick={handleOpen} >+ ADD NEW PRODUCT</Button>
-                <ProductModal open={open}
-                    onClose={handleClose}
-                    selectedProduct={selectedProduct}
-                    key={selectedProduct?.id ?? "new"}
-                />
+            <Box sx={ProductsStyles.main}>
+                <Box sx={ProductsStyles.ButtonContainer} >
+                    <Button variant="contained" onClick={handleOpen} >+ ADD NEW PRODUCT</Button>
+                    <ProductModal open={open}
+                        onClose={handleClose}
+                        selectedProduct={selectedProduct}
+                        key={selectedProduct?.id ?? "new"}
+                    />
+                </Box>
+                <Box sx={ProductsStyles.productList}>
+                    <ProductList onEdit={handleEdit} onDelete={handleDelete} />
+                </Box>
             </Box>
-            <Box>
-                <ProductList onEdit={handleEdit} onDelete={handleDelete} />
-            </Box>
+
             <Footer />
-        </div>
+        </Box>
     )
 }
 export default Products

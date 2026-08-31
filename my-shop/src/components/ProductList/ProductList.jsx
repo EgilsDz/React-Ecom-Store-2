@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { Box } from "@mui/material";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchProducts } from "../features/products/productsSlice";
-import ProductCard from "./ProductCard/ProductCard";
+import { fetchProducts } from "../../features/products/productsSlice";
+import ProductCard from "../ProductCard/ProductCard";
+import { ProductListStyles } from "./ProductListStyles";
 
 function ProductList({ onEdit, onDelete }) {
     const products = useSelector(state => state.products.productItems)
@@ -12,7 +13,7 @@ function ProductList({ onEdit, onDelete }) {
     }, [dispatch]);
 
     return (
-        <Box sx={{ display: "grid", gridTemplateColumns: "repeat(4, 225px)", columnGap: "20px", justifyContent: "center", marginBottom: "80px", rowGap: "50px", }}>
+        <Box sx={ProductListStyles.container}>
             {products.map((product) => (
                 <ProductCard
                     onEdit={onEdit}

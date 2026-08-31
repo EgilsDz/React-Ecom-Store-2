@@ -1,6 +1,17 @@
 export const CartStyles = {
 
     title: {
+        display: "flex",
+        color: "#1976d2",
+        justifyContent: "space-between",
+        mr: { xs: 2, sm: 4, md: 5 },
+        ml: { xs: 2, sm: 4, md: 5 },
+        mt: { xs: 3, md: 6 },
+        mb: { xs: 5, md: 10 },
+        fontSize: {
+            xs: "18px",
+            sm: "20px",
+        },
     },
 
     emptyCard: {
@@ -9,9 +20,13 @@ export const CartStyles = {
         justifyContent: "center",
         pt: 2,
         pb: 3,
-        mb: 20,
+        mb: { xs: 10, md: 20 },
         color: "#1976d2",
-        width: "45%",
+        width: {
+            xs: "90%",
+            sm: "70%",
+            md: "45%",
+        },
         mx: "auto"
     },
 
@@ -20,7 +35,10 @@ export const CartStyles = {
     },
 
     quantity: {
-        fontSize: "25px",
+        fontSize: {
+            xs: "20px",
+            md: "25px",
+        },
         fontWeight: "bold",
     },
 
@@ -30,20 +48,40 @@ export const CartStyles = {
         gap: 2
     },
     Fullcard: {
-        margin: 5
+        margin: {
+            xs: 2,
+            sm: 3,
+            md: 5,
+        },
     },
 
     card: {
         display: "flex",
         alignItems: "center",
-        gap: 8
+        gap: {
+            xs: 2,
+            sm: 4,
+            md: 8,
+        },
+
+        "@media (max-width: 700px)": {
+            flexDirection: "column",
+            textAlign: "center",
+            py: 3,
+        },
     },
 
 
     specsTitle: {
         color: "#1976d2",
-        textAlign: "left",
-        fontSize: "20px",
+        textAlign: {
+            xs: "center",
+            md: "left",
+        },
+        fontSize: {
+            xs: "18px",
+            sm: "20px",
+        },
         fontWeight: "bold",
         mb: 3,
 
@@ -51,7 +89,10 @@ export const CartStyles = {
 
     specs: {
         fontSize: "11px",
-        textAlign: "left",
+        textAlign: {
+            xs: "center",
+            md: "left",
+        },
         mb: 0.5,
     },
 
@@ -67,29 +108,59 @@ export const CartStyles = {
         justifyContent: "center",
         alignItems: "center",
         gap: 2,
-        mr: 2
+        mr: {
+            xs: 0,
+            md: 2,
+        },
 
     },
 
     itemTotal: {
+        fontSize: {
+            xs: "18px",
+            sm: "20px",
+        },
     },
 
     total: {
-        mr: 5
+        mr: {
+            xs: 0,
+            md: 5,
+        },
+        fontWeight: "bold",
     },
 
     titleBox: {
         display: "flex",
         color: "#1976d2",
         justifyContent: "space-between",
-        mr: 5,
-        ml: 5,
-        mt: 6,
-        mb: 10,
-        fontSize: "20px"
+        alignItems: "center",
+        mr: {
+            xs: 2,
+            sm: 4,
+            md: 5,
+        },
+        ml: {
+            xs: 2,
+            sm: 4,
+            md: 5,
+        },
+        mt: {
+            xs: 3,
+            md: 6,
+        },
+        mb: {
+            xs: 5,
+            md: 10,
+        },
+        fontSize: "20px",
     },
 
     specsContainer: {
-        flex: "1"
+        flex: "1",
+        width: {
+            xs: "100%",
+            md: "auto",
+        },
     }
 }

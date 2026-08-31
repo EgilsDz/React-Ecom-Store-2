@@ -75,7 +75,7 @@ function Navbar() {
                      cursor: "pointer",
                   }}
                >
-                  Cart({amount})
+                  Cart ({amount})
                </MuiLink>
             </Toolbar>
          </AppBar>
