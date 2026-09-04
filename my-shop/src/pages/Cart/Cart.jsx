@@ -1,6 +1,6 @@
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
-import { Typography, Card, CardContent, Box, Button } from "@mui/material"
+import { Typography, Card, CardContent, Box, Button, Skeleton } from "@mui/material"
 import { Link } from "react-router-dom"
 import { CartStyles } from "./CartStyles"
 import { useSelector, useDispatch } from "react-redux"
@@ -14,6 +14,7 @@ const images = import.meta.glob(
         import: "default",
     }
 )
+
 
 function Cart() {
 
@@ -53,15 +54,26 @@ function Cart() {
                         <Card key={cartitems.id} sx={CartStyles.Fullcard}>
                             <CardContent sx={CartStyles.card}>
                                 <Box>
-                                    <img
-                                        src={imagePath}
-                                        alt={cartitems.title}
-                                        style={{
-                                            width: "150px",
-                                            height: "150px",
-                                            objectFit: "contain",
-                                        }}
-                                    />
+                                    {cartitems?.image ? (
+                                        <img
+                                            src={imagePath}
+                                            alt={cartitems.title}
+                                            style={{
+                                                width: "150px",
+                                                height: "150px",
+                                                objectFit: "contain",
+                                            }}
+                                        />
+                                    ) : (
+                                        <Skeleton
+                                            animation="wave"
+                                            sx={{
+                                                width: "150px",
+                                                height: "150px",
+                                                objectFit: "contain",
+                                            }}
+                                        />
+                                    )}
                                 </Box>
 
                                 <Box sx={CartStyles.specsContainer}>

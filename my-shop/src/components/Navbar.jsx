@@ -41,7 +41,7 @@ function Navbar() {
 
                <MuiLink
                   component={RouterLink}
-                  to="/products"
+                  to="/category"
                   color="inherit"
                   underline="none"
                   sx={{
@@ -49,7 +49,7 @@ function Navbar() {
                      cursor: "pointer",
                   }}
                >
-                  Products
+                  Category
                </MuiLink>
 
                <MuiLink

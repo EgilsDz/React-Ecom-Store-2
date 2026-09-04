@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { fetchProducts } from "../../features/products/productsSlice";
 import ProductCard from "../ProductCard/ProductCard";
 import { ProductListStyles } from "./ProductListStyles";
+import { useSearchParams } from "react-router-dom";
 
 function ProductList({ onEdit, onDelete }) {
     const products = useSelector(state => state.products.productItems)
@@ -11,10 +12,13 @@ function ProductList({ onEdit, onDelete }) {
     useEffect(() => {
         dispatch(fetchProducts());
     }, [dispatch]);
-
+    const [searchParams] = useSearchParams();
+    const productCategory = searchParams.get("category")
+    const filteredProducts = products.filter((product) => (productCategory === product.category))
+    const productsToShow = productCategory === null ? products : filteredProducts
     return (
         <Box sx={ProductListStyles.container}>
-            {products.map((product) => (
+            {productsToShow.map((product) => (
                 <ProductCard
                     onEdit={onEdit}
                     onDelete={onDelete}

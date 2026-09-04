@@ -1,8 +1,9 @@
 {
   "products": [
-    {
+   {
       "id": "1",
       "title": "Smartwatch",
+      "category": "smartwatches",
       "price": 199.99,
       "image": "smartwatch.png",
       "short_description": " Stay connected on the go with this sleek and versatile smartwatch.",
@@ -21,6 +22,7 @@
     {
       "id": "2",
       "title": "Laptop",
+      "category": "laptops",
       "price": 899.99,
       "image": "laptop.png",
       "short_description": " Make your work and entertainment with you wherever you go with this laptop.",
@@ -39,6 +41,7 @@
     {
       "id": "3",
       "title": "Smart Assistant",
+      "category": "accessories",
       "price": 149.99,
       "image": "smart_assistant.png",
       "short_description": " Make your life easier with this smart assistant that can answer your questions.",
@@ -57,6 +60,7 @@
     {
       "id": "4",
       "title": "Smartphone",
+      "category": "smartphones",
       "price": 699.99,
       "image": "smartphone.png",
       "short_description": " Stay connected and productive on the go with this powerful smartphone.   ",
@@ -75,6 +79,7 @@
     {
       "id": "5",
       "title": "Earbuds",
+      "category": "audio",
       "price": 129.99,
       "image": "earbuds.png",
       "short_description": " Enjoy your favorite music and podcasts with these comfortable earbuds.",
@@ -93,6 +98,7 @@
     {
       "id": "6",
       "title": "Tablet",
+      "category": "tablets",
       "price": 399.99,
       "image": "tablet.png",
       "short_description": " Stay productive and entertained on the go with this versatile tablet.",
@@ -111,6 +117,7 @@
     {
       "id": "7",
       "title": "Portable Speaker",
+      "category": "audio",
       "price": 99.99,
       "image": "portable_speaker.png",
       "short_description": " Take your music anywhere with this compact and powerful portable speaker.",
@@ -129,6 +136,7 @@
     {
       "id": "8",
       "title": "Web Camera",
+      "category": "accessories",
       "price": 59.99,
       "image": "webcam.png",
       "short_description": " Stay connected with this high-quality web camera. ",
@@ -142,6 +150,434 @@
         "Plug-and-play setup",
         "Adjustable clip",
         "Compatible with Windows and Mac"
+      ]
+    },
+
+    {
+      "id": "9",
+      "title": "Gaming Desktop",
+      "category": "desktops",
+      "price": 1499.99,
+      "image": "",
+      "short_description": " Powerful gaming desktop built for demanding games and applications.",
+      "long_description": "This gaming desktop combines a high-performance processor, dedicated graphics, and fast storage to deliver smooth gaming and excellent performance for demanding applications.",
+      "year": 2024,
+      "RAM": "32GB",
+      "warranty_period": "3 years",
+      "features": [
+        "High-performance processor",
+        "Dedicated graphics",
+        "32GB RAM",
+        "Fast SSD storage",
+        "Gaming-ready design"
+      ]
+    },
+    {
+      "id": "10",
+      "title": "Home Office Desktop",
+      "category": "desktops",
+      "price": 799.99,
+      "image": "",
+      "short_description": " Reliable desktop computer designed for everyday work and home use.",
+      "long_description": "A dependable desktop for office applications, web browsing, video calls, document editing, and everyday home computing.",
+      "year": 2023,
+      "RAM": "16GB",
+      "warranty_period": "2 years",
+      "features": [
+        "Efficient processor",
+        "16GB RAM",
+        "SSD storage",
+        "Multiple USB ports",
+        "Compact design"
+      ]
+    },
+    {
+      "id": "11",
+      "title": "Professional Workstation",
+      "category": "desktops",
+      "price": 2199.99,
+      "image": "",
+      "short_description": " High-performance workstation designed for professional workloads.",
+      "long_description": "This workstation is designed for professionals working with demanding software, large projects, development environments, and creative applications.",
+      "year": 2024,
+      "RAM": "64GB",
+      "warranty_period": "3 years",
+      "features": [
+        "Professional processor",
+        "64GB RAM",
+        "Dedicated graphics",
+        "Large SSD",
+        "Advanced cooling"
+      ]
+    },
+
+    {
+      "id": "12",
+      "title": "Ultrabook Pro",
+      "category": "laptops",
+      "price": 1299.99,
+      "image": "",
+      "short_description": " Slim and powerful laptop designed for work and travel.",
+      "long_description": "A lightweight laptop combining strong performance, long battery life, and a high-quality display for professionals and students on the move.",
+      "year": 2024,
+      "RAM": "16GB",
+      "warranty_period": "2 years",
+      "features": [
+        "Lightweight design",
+        "16GB RAM",
+        "Fast SSD",
+        "Long battery life",
+        "High-resolution display"
+      ]
+    },
+    {
+      "id": "13",
+      "title": "Gaming Laptop",
+      "category": "laptops",
+      "price": 1699.99,
+      "image": "",
+      "short_description": " Powerful gaming laptop with dedicated graphics.",
+      "long_description": "This gaming laptop delivers desktop-class performance in a portable design, making it suitable for modern games and demanding creative applications.",
+      "year": 2024,
+      "RAM": "32GB",
+      "warranty_period": "3 years",
+      "features": [
+        "Dedicated graphics",
+        "32GB RAM",
+        "High-refresh-rate display",
+        "Fast SSD storage",
+        "Advanced cooling"
+      ]
+    },
+
+    {
+      "id": "14",
+      "title": "Student Laptop",
+      "category": "laptops",
+      "price": 649.99,
+      "image": "",
+      "short_description": " Affordable and portable laptop for everyday study and work.",
+      "long_description": "Designed for students and everyday users, this laptop provides enough performance for browsing, documents, online classes, and multimedia.",
+      "year": 2023,
+      "RAM": "8GB",
+      "warranty_period": "2 years",
+      "features": [
+        "Portable design",
+        "8GB RAM",
+        "SSD storage",
+        "Full HD display",
+        "Long battery life"
+      ]
+    },
+
+    {
+      "id": "15",
+      "title": "Flagship Smartphone",
+      "category": "smartphones",
+      "price": 999.99,
+      "image": "",
+      "short_description": " Premium smartphone with a powerful processor and advanced camera system.",
+      "long_description": "A flagship smartphone featuring a vibrant display, advanced cameras, powerful performance, and a long-lasting battery.",
+      "year": 2024,
+      "RAM": "12GB",
+      "warranty_period": "2 years",
+      "features": [
+        "High-resolution camera",
+        "12GB RAM",
+        "OLED display",
+        "Fast charging",
+        "5G connectivity"
+      ]
+    },
+    {
+      "id": "16",
+      "title": "Midrange Smartphone",
+      "category": "smartphones",
+      "price": 499.99,
+      "image": "",
+      "short_description": " Balanced smartphone offering strong everyday performance.",
+      "long_description": "This smartphone provides a combination of performance, camera quality, battery life, and modern connectivity at a more accessible price.",
+      "year": 2024,
+      "RAM": "8GB",
+      "warranty_period": "2 years",
+      "features": [
+        "High-quality camera",
+        "8GB RAM",
+        "Full HD display",
+        "Fast charging",
+        "5G connectivity"
+      ]
+    },
+    {
+      "id": "17",
+      "title": "Compact Smartphone",
+      "category": "smartphones",
+      "price": 399.99,
+      "image": "",
+      "short_description": " Compact smartphone designed for comfortable everyday use.",
+      "long_description": "A compact and lightweight smartphone offering reliable performance, a quality display, and a capable camera system.",
+      "year": 2023,
+      "RAM": "8GB",
+      "warranty_period": "2 years",
+      "features": [
+        "Compact design",
+        "8GB RAM",
+        "Dual camera",
+        "Fast charging",
+        "Fingerprint sensor"
+      ]
+    },
+
+    {
+      "id": "18",
+      "title": "Gaming Tablet",
+      "category": "tablets",
+      "price": 699.99,
+      "image": "",
+      "short_description": " Large-screen tablet designed for gaming and entertainment.",
+      "long_description": "This tablet features a responsive display, powerful processor, and large battery, making it suitable for gaming, streaming, and everyday use.",
+      "year": 2024,
+      "RAM": "12GB",
+      "warranty_period": "2 years",
+      "features": [
+        "High-refresh-rate display",
+        "12GB RAM",
+        "Large battery",
+        "Stereo speakers",
+        "Fast processor"
+      ]
+    },
+    {
+      "id": "19",
+      "title": "Productivity Tablet",
+      "category": "tablets",
+      "price": 599.99,
+      "image": "",
+      "short_description": " Versatile tablet for work, study, and entertainment.",
+      "long_description": "A versatile tablet designed for taking notes, browsing, video calls, document editing, and multimedia consumption.",
+      "year": 2024,
+      "RAM": "8GB",
+      "warranty_period": "2 years",
+      "features": [
+        "High-resolution display",
+        "8GB RAM",
+        "Stylus support",
+        "Long battery life",
+        "USB-C connectivity"
+      ]
+    },
+    {
+      "id": "20",
+      "title": "Compact Tablet",
+      "category": "tablets",
+      "price": 349.99,
+      "image": "",
+      "short_description": " Compact and affordable tablet for everyday entertainment.",
+      "long_description": "This lightweight tablet is ideal for reading, browsing, watching videos, and using everyday applications.",
+      "year": 2023,
+      "RAM": "6GB",
+      "warranty_period": "2 years",
+      "features": [
+        "Compact design",
+        "6GB RAM",
+        "HD display",
+        "Long battery life",
+        "Lightweight body"
+      ]
+    },
+
+    {
+      "id": "21",
+      "title": "Fitness Smartwatch",
+      "category": "smartwatches",
+      "price": 249.99,
+      "image": "",
+      "short_description": " Fitness-focused smartwatch for tracking workouts and health activities.",
+      "long_description": "Designed for active users, this smartwatch provides workout tracking, heart-rate monitoring, activity statistics, and smartphone notifications.",
+      "year": 2024,
+      "RAM": "2GB",
+      "warranty_period": "2 years",
+      "features": [
+        "Heart-rate monitoring",
+        "Workout tracking",
+        "Sleep tracking",
+        "GPS",
+        "Water resistance"
+      ]
+    },
+    {
+      "id": "22",
+      "title": "Premium Smartwatch",
+      "category": "smartwatches",
+      "price": 399.99,
+      "image": "",
+      "short_description": " Premium smartwatch combining fitness features with everyday connectivity.",
+      "long_description": "A premium wearable featuring advanced health tracking, smartphone notifications, GPS, and a high-quality display.",
+      "year": 2024,
+      "RAM": "2GB",
+      "warranty_period": "2 years",
+      "features": [
+        "Advanced health tracking",
+        "GPS",
+        "AMOLED display",
+        "Voice assistant",
+        "Fast charging"
+      ]
+    },
+
+    {
+      "id": "23",
+      "title": "Wireless Headphones",
+      "category": "audio",
+      "price": 299.99,
+      "image": "",
+      "short_description": " Comfortable wireless headphones with immersive sound.",
+      "long_description": "These wireless headphones provide rich audio, active noise cancellation, comfortable ear cushions, and long battery life.",
+      "year": 2024,
+      "RAM": "N/A",
+      "warranty_period": "2 years",
+      "features": [
+        "Active noise cancellation",
+        "Wireless connectivity",
+        "Long battery life",
+        "Built-in microphone",
+        "Comfortable design"
+      ]
+    },
+    {
+      "id": "24",
+      "title": "Studio Headphones",
+      "category": "audio",
+      "price": 199.99,
+      "image": "",
+      "short_description": " High-quality headphones designed for detailed audio listening.",
+      "long_description": "These studio-style headphones are designed for music listening, content creation, and anyone who wants detailed and balanced sound.",
+      "year": 2023,
+      "RAM": "N/A",
+      "warranty_period": "2 years",
+      "features": [
+        "High-quality audio",
+        "Over-ear design",
+        "Comfortable ear cushions",
+        "Detachable cable",
+        "Noise isolation"
+      ]
+    },
+
+    {
+      "id": "25",
+      "title": "Mechanical Keyboard",
+      "category": "accessories",
+      "price": 119.99,
+      "image": "",
+      "short_description": " Responsive mechanical keyboard designed for work and gaming.",
+      "long_description": "A durable mechanical keyboard featuring responsive switches, customizable lighting, and a comfortable layout for long sessions.",
+      "year": 2024,
+      "RAM": "N/A",
+      "warranty_period": "2 years",
+      "features": [
+        "Mechanical switches",
+        "RGB lighting",
+        "USB connectivity",
+        "Durable construction",
+        "Programmable keys"
+      ]
+    },
+    {
+      "id": "26",
+      "title": "Wireless Mouse",
+      "category": "accessories",
+      "price": 59.99,
+      "image": "",
+      "short_description": " Comfortable wireless mouse for everyday productivity and gaming.",
+      "long_description": "This wireless mouse provides precise tracking, a comfortable ergonomic shape, and reliable wireless connectivity.",
+      "year": 2024,
+      "RAM": "N/A",
+      "warranty_period": "2 years",
+      "features": [
+        "Wireless connectivity",
+        "Precision tracking",
+        "Ergonomic design",
+        "Adjustable sensitivity",
+        "Long battery life"
+      ]
+    },
+
+    {
+      "id": "27",
+      "title": "USB-C Docking Station",
+      "category": "accessories",
+      "price": 99.99,
+      "image": "",
+      "short_description": " Multi-port docking station for laptops and other USB-C devices.",
+      "long_description": "A versatile docking station that expands USB-C devices with additional display, USB, networking, and charging connectivity.",
+      "year": 2024,
+      "RAM": "N/A",
+      "warranty_period": "2 years",
+      "features": [
+        "Multiple USB ports",
+        "HDMI output",
+        "Ethernet connectivity",
+        "USB-C charging",
+        "Compact design"
+      ]
+    },
+
+    {
+      "id": "28",
+      "title": "4K Gaming Monitor",
+      "category": "monitors",
+      "price": 599.99,
+      "image": "",
+      "short_description": " High-resolution gaming monitor with a fast refresh rate.",
+      "long_description": "This gaming monitor combines 4K resolution, a fast refresh rate, and adaptive synchronization for a smooth gaming experience.",
+      "year": 2024,
+      "RAM": "N/A",
+      "warranty_period": "3 years",
+      "features": [
+        "4K resolution",
+        "144Hz refresh rate",
+        "Adaptive sync",
+        "HDR support",
+        "Low response time"
+      ]
+    },
+    {
+      "id": "29",
+      "title": "Professional 27-inch Monitor",
+      "category": "monitors",
+      "price": 449.99,
+      "image": "",
+      "short_description": " Color-accurate monitor designed for professional work.",
+      "long_description": "A professional display designed for photography, graphic design, video editing, and other color-sensitive workloads.",
+      "year": 2024,
+      "RAM": "N/A",
+      "warranty_period": "3 years",
+      "features": [
+        "27-inch display",
+        "High color accuracy",
+        "QHD resolution",
+        "Wide viewing angles",
+        "Adjustable stand"
+      ]
+    },
+    {
+      "id": "30",
+      "title": "Full HD Office Monitor",
+      "category": "monitors",
+      "price": 199.99,
+      "image": "",
+      "short_description": " Reliable Full HD monitor for everyday office and home use.",
+      "long_description": "An affordable monitor designed for office applications, browsing, studying, and general everyday computer use.",
+      "year": 2023,
+      "RAM": "N/A",
+      "warranty_period": "2 years",
+      "features": [
+        "Full HD resolution",
+        "24-inch display",
+        "Low blue light mode",
+        "HDMI connectivity",
+        "Adjustable stand"
       ]
     }
   ],
