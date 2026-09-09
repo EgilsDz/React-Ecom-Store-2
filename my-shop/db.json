@@ -1,6 +1,6 @@
 {
   "products": [
-   {
+    {
       "id": "1",
       "title": "Smartwatch",
       "category": "smartwatches",
@@ -152,7 +152,6 @@
         "Compatible with Windows and Mac"
       ]
     },
-
     {
       "id": "9",
       "title": "Gaming Desktop",
@@ -210,7 +209,6 @@
         "Advanced cooling"
       ]
     },
-
     {
       "id": "12",
       "title": "Ultrabook Pro",
@@ -249,7 +247,6 @@
         "Advanced cooling"
       ]
     },
-
     {
       "id": "14",
       "title": "Student Laptop",
@@ -269,7 +266,6 @@
         "Long battery life"
       ]
     },
-
     {
       "id": "15",
       "title": "Flagship Smartphone",
@@ -327,7 +323,6 @@
         "Fingerprint sensor"
       ]
     },
-
     {
       "id": "18",
       "title": "Gaming Tablet",
@@ -385,7 +380,6 @@
         "Lightweight body"
       ]
     },
-
     {
       "id": "21",
       "title": "Fitness Smartwatch",
@@ -424,7 +418,6 @@
         "Fast charging"
       ]
     },
-
     {
       "id": "23",
       "title": "Wireless Headphones",
@@ -463,7 +456,6 @@
         "Noise isolation"
       ]
     },
-
     {
       "id": "25",
       "title": "Mechanical Keyboard",
@@ -502,7 +494,6 @@
         "Long battery life"
       ]
     },
-
     {
       "id": "27",
       "title": "USB-C Docking Station",
@@ -522,7 +513,6 @@
         "Compact design"
       ]
     },
-
     {
       "id": "28",
       "title": "4K Gaming Monitor",
@@ -579,6 +569,24 @@
         "HDMI connectivity",
         "Adjustable stand"
       ]
+    }
+  ],
+  "users": [
+    {
+      "firstName": "Jim",
+      "lastName": "Carry",
+      "email": "JimCarry@gmail.com",
+      "password": "123456789",
+      "confirmPassword": "123456789",
+      "id": "RiWNCeU-iSk"
+    },
+    {
+      "firstName": "Jim",
+      "lastName": "Carry",
+      "email": "JimCarry@gmail.com",
+      "password": "123456789",
+      "confirmPassword": "123456789",
+      "id": "15LU0Q4J-3E"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

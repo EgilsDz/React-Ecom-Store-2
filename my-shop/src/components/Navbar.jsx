@@ -77,6 +77,19 @@ function Navbar() {
                >
                   Cart ({amount})
                </MuiLink>
+
+               <MuiLink
+                  component={RouterLink}
+                  to="/login"
+                  color="inherit"
+                  underline="none"
+                  sx={{
+                     ml: 3,
+                     cursor: "pointer",
+                  }}
+               >
+                  Login/Register
+               </MuiLink>
             </Toolbar>
          </AppBar>
       </Box>

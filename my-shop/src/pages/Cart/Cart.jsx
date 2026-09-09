@@ -27,7 +27,7 @@ function Cart() {
             <Card sx={CartStyles.emptyCard}>
                 <CardContent>
                     <Typography>Your shopping cart is empty</Typography>
-                    <Typography>Go to <Link to="/products" style={CartStyles.Link}>Products Page</Link></Typography>
+                    <Typography>Go to <Link to="/category" style={CartStyles.Link}>Category Page</Link></Typography>
                 </CardContent>
             </Card>
             <Footer />
