@@ -12,6 +12,7 @@ import { useSelector } from 'react-redux';
 function Navbar() {
 
    const { amount } = useSelector((state) => state.cart)
+   const auth = useSelector((state) => state.auth)
    return (
       <Box sx={{ flexGrow: 1 }}>
          <AppBar position="static">
@@ -78,18 +79,49 @@ function Navbar() {
                   Cart ({amount})
                </MuiLink>
 
-               <MuiLink
-                  component={RouterLink}
-                  to="/login"
-                  color="inherit"
-                  underline="none"
-                  sx={{
-                     ml: 3,
-                     cursor: "pointer",
-                  }}
-               >
-                  Login/Register
-               </MuiLink>
+               {auth.isAuthenticated === true ? (
+                  <>
+                     <MuiLink
+                        component={RouterLink}
+                        to="/profile"
+                        color="inherit"
+                        underline="none"
+                        sx={{
+                           ml: 3,
+                           cursor: "pointer",
+                        }}
+                     >
+                        Profile
+                     </MuiLink>
+                     <MuiLink
+                        component={RouterLink}
+                        to="/"
+                        color="inherit"
+                        underline="none"
+                        sx={{
+                           ml: 3,
+                           cursor: "pointer",
+                        }}
+                     >
+                        Logout
+                     </MuiLink>
+                  </>
+               )
+                  :
+                  (<MuiLink
+                     component={RouterLink}
+                     to="/login"
+                     color="inherit"
+                     underline="none"
+                     sx={{
+                        ml: 3,
+                        cursor: "pointer",
+                     }}
+                  >
+                     Login/Register
+                  </MuiLink>
+                  )}
+
             </Toolbar>
          </AppBar>
       </Box>

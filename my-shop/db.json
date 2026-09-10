@@ -615,6 +615,13 @@
       "email": "JimCarry1234@gmail.com",
       "password": "123",
       "id": "RoENdh3spf8"
+    },
+    {
+      "firstName": "Jim",
+      "lastName": "Carry",
+      "email": "JimCarry12@gmail.com",
+      "password": "123",
+      "id": "EbXP44e-oMA"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

@@ -7,6 +7,7 @@ import Details from "./pages/Details/Details"
 import Login from "./pages/Login/Login"
 import Register from "./pages/Register/Register"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
+import Profile from "./pages/Profile/Profile"
 
 
 
@@ -22,6 +23,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/category" element={<Category />} />
         <Route path="/details/:id" element={<Details />} />
+        <Route path="/profile" element={<Profile />} />
       </Routes>
     </BrowserRouter>
   )

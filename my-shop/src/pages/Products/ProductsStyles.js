@@ -44,4 +44,6 @@ export const ProductsStyles = {
         width: "100%",
         overflowX: "auto",
     },
+
+
 };
