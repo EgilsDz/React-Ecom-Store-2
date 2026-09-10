@@ -1,23 +1,32 @@
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
-import { Card, CardContent, Box, Typography, TextField, Button } from "@mui/material"
+import { Card, CardContent, Box, Typography, TextField, Button, Modal } from "@mui/material"
 import { Link } from "react-router-dom"
 import { registerStyles } from "./registerStyles"
 import { useState } from "react"
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addUser } from "../../features/Auth/authSlice"
 
 
 function Register() {
 
     const dispatch = useDispatch()
-    const [registerData, setRegisterData] = useState({
+    const [modalOpen, setModalOpen] = useState(false)
+    const [modalMessage, setModalMessage] = useState("")
+    const error = useSelector(state => state.auth.error)
+    const initialRegisterData = {
         firstName: "",
         lastName: "",
         email: "",
         password: "",
         confirmPassword: ""
-    });
+    }
+    const [registerData, setRegisterData] = useState(initialRegisterData);
+
+
+    const handleClose = () => {
+        setModalOpen(false)
+    }
 
     const handleChange = (e) => {
         setRegisterData({
@@ -35,10 +44,20 @@ function Register() {
             return;
         }
         try {
-            await dispatch(addUser(registerData)).unwrap();
-            console.log("Registration successful");
+            await dispatch(addUser({
+                firstName: registerData.firstName,
+                lastName: registerData.lastName,
+                email: registerData.email,
+                password: registerData.password
+            }
+            )).unwrap();
+            setModalMessage("Registration successful")
+            setModalOpen(true)
+            setRegisterData(initialRegisterData)
         } catch (error) {
-            console.error("Registration failed:", error);
+            setModalMessage(`Registration failed: ${error.message}`)
+            setModalOpen(true)
+
         }
     }
     return (
@@ -116,6 +135,21 @@ function Register() {
                         <Typography>Already have an account?</Typography>
                         <Link to="/login" style={registerStyles.register}>Login</Link>
                     </CardContent>
+                    <Modal
+                        open={modalOpen}
+                        onClose={handleClose}
+                        aria-labelledby="modal-modal-title"
+                        aria-describedby="modal-modal-description"
+                    >
+                        <Box sx={registerStyles.Modalstyle}>
+                            <Typography id="modal-modal-title" variant="h6" component="h2">
+                                {error === null ? "Successful" : "Error"}
+                            </Typography>
+                            <Typography id="modal-modal-description" sx={{ mt: 2 }}>
+                                {modalMessage}
+                            </Typography>
+                        </Box>
+                    </Modal>
                 </Card>
             </Box>
             <Footer />

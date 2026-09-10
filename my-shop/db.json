@@ -587,6 +587,34 @@
       "password": "123456789",
       "confirmPassword": "123456789",
       "id": "15LU0Q4J-3E"
+    },
+    {
+      "firstName": "Lenny",
+      "lastName": "Benny",
+      "email": "LB@yahoo.com",
+      "password": "1234",
+      "id": "wcysWYa7GUQ"
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Pan",
+      "email": "PeterP@gmail.com",
+      "password": "123",
+      "id": "A1XFwNmt6KM"
+    },
+    {
+      "firstName": "Peter",
+      "lastName": "Pan",
+      "email": "PeterPan@gmail.com",
+      "password": "123",
+      "id": "zjNa0691E_0"
+    },
+    {
+      "firstName": "Jim",
+      "lastName": "Carry",
+      "email": "JimCarry1234@gmail.com",
+      "password": "123",
+      "id": "RoENdh3spf8"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
