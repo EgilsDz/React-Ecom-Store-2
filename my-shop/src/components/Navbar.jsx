@@ -1,18 +1,27 @@
 import LaptopIcon from '@mui/icons-material/Laptop';
 import AppBar from '@mui/material/AppBar';
+import { logout } from '../features/Auth/authSlice';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Typography from "@mui/material/Typography";
 import { Link as MuiLink } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
 
 
 function Navbar() {
-
+   const dispatch = useDispatch()
    const { amount } = useSelector((state) => state.cart)
    const auth = useSelector((state) => state.auth)
+
+   const handleClick = () => {
+      localStorage.removeItem("currentUser")
+      dispatch(logout())
+   }
+
+
+
    return (
       <Box sx={{ flexGrow: 1 }}>
          <AppBar position="static">
@@ -96,6 +105,7 @@ function Navbar() {
                      <MuiLink
                         component={RouterLink}
                         to="/"
+                        onClick={handleClick}
                         color="inherit"
                         underline="none"
                         sx={{
