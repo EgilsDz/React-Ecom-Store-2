@@ -37,11 +37,11 @@ function Register() {
     }
 
     const handleSubmit = async (e) => {
-        e.preventDefault();
+        e.preventDefault()
 
         if (registerData.password !== registerData.confirmPassword) {
             alert("Check the passwords");
-            return;
+            return
         }
         try {
             await dispatch(addUser({
@@ -50,7 +50,7 @@ function Register() {
                 email: registerData.email,
                 password: registerData.password
             }
-            )).unwrap();
+            )).unwrap()
             setModalMessage("Registration successful")
             setModalOpen(true)
             setRegisterData(initialRegisterData)

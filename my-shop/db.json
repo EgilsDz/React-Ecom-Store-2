@@ -578,7 +578,12 @@
       "email": "JimCarry@gmail.com",
       "password": "123456789",
       "confirmPassword": "123456789",
-      "id": "RiWNCeU-iSk"
+      "id": "RiWNCeU-iSk",
+      "phoneNumber": "123456",
+      "country": "Latvia",
+      "city": "Riga",
+      "address": "Origo",
+      "postalCode": "LV-3457"
     },
     {
       "firstName": "Jim",
@@ -622,6 +627,18 @@
       "email": "JimCarry12@gmail.com",
       "password": "123",
       "id": "EbXP44e-oMA"
+    },
+    {
+      "firstName": "Jerry",
+      "lastName": "Larry",
+      "email": "BarryL@gmail.com",
+      "password": "123",
+      "id": "nlyWVbTPPPI",
+      "phoneNumber": "",
+      "country": "",
+      "city": "",
+      "address": "",
+      "postalCode": ""
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"
