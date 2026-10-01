@@ -7,6 +7,8 @@ import Typography from "@mui/material/Typography";
 import { Link as MuiLink } from '@mui/material';
 import { Link as RouterLink } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
+import { loadUserCart } from '../features/cart/cartSlice';
 
 
 
@@ -14,10 +16,20 @@ function Navbar() {
    const dispatch = useDispatch()
    const { amount } = useSelector((state) => state.cart)
    const auth = useSelector((state) => state.auth)
+   const currentUser = useSelector((state) => state.auth.currentUser)
+
+   useEffect(() => {
+      if (currentUser && currentUser.id) {
+         dispatch(loadUserCart(currentUser.id))
+      } else {
+         dispatch(loadUserCart("guest"))
+      }
+   }, [currentUser, dispatch])
 
    const handleClick = () => {
       localStorage.removeItem("currentUser")
       dispatch(logout())
+      dispatch(loadUserCart("guest"))
    }
 
 

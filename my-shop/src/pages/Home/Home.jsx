@@ -27,7 +27,7 @@ function Home() {
                         <Button variant="outlined" component={Link} to="/contact" >
                             CONTACT US
                         </Button>
-                        <Button variant="contained" component={Link} to="/products" >SHOP NOW</Button>
+                        <Button variant="contained" component={Link} to="/category" >SHOP NOW</Button>
                     </Box>
                 </Box>
                 <Box sx={homeStyles.imageSection}><img src={img1} width={450} style={homeStyles.image}></img>

@@ -22,24 +22,26 @@ const images = import.meta.glob(
 
 
 function Details() {
-    const [open, setOpen] = useState(false);
-    const navigate = useNavigate();
-    let { id } = useParams();
+    const [open, setOpen] = useState(false)
+    const navigate = useNavigate()
+    let { id } = useParams()
     const products = useSelector(state => state.products.productItems)
     const cart = useSelector(state => state.cart)
-    const dispatch = useDispatch();
+    const currentUser = useSelector(state => state.auth.currentUser)
+    const dispatch = useDispatch()
+    const userId = currentUser ? currentUser.id : "guest"
     useEffect(() => {
-        dispatch(fetchProducts());
-    }, [dispatch]);
+        dispatch(fetchProducts())
+    }, [dispatch])
     const product = products.find((product) => product.id == id)
     const cartItem = cart.cartItems.find((cartItem) => cartItem.id == id)
 
     const handleClose = () => {
-        setOpen(false);
+        setOpen(false)
     };
 
     const handleEdit = () => {
-        setOpen(true);
+        setOpen(true)
     };
 
     const handleDelete = async (product) => {
@@ -85,11 +87,11 @@ function Details() {
                             <Box sx={DetailsStyles.buttonSection}>
                                 <ProductMenu sx={DetailsStyles.button} product={product} onEdit={handleEdit}
                                     onDelete={handleDelete} />
-                                {!cartItem ? (<Button variant="contained" sx={DetailsStyles.button} onClick={() => dispatch(addToCart(product))}>Add to cart</Button>) : (
+                                {!cartItem ? (<Button variant="contained" sx={DetailsStyles.button} onClick={() => dispatch(addToCart({ product, userId }))}>Add to cart</Button>) : (
                                     <Box sx={DetailsStyles.quantitybox}>
-                                        <Button variant="outlined" sx={DetailsStyles.CartBtn} onClick={() => dispatch(decreaseQuantity(id))}>-</Button>
+                                        <Button variant="outlined" sx={DetailsStyles.CartBtn} onClick={() => dispatch(decreaseQuantity({ id, userId }))}>-</Button>
                                         <Typography sx={DetailsStyles.quantity}>{cartItem.quantity} </Typography>
-                                        <Button variant="contained" sx={DetailsStyles.CartBtn} onClick={() => dispatch(increaseQuantity(id))}>+</Button>
+                                        <Button variant="contained" sx={DetailsStyles.CartBtn} onClick={() => dispatch(increaseQuantity({ id, userId }))}>+</Button>
                                     </Box>
                                 )}
                             </Box>

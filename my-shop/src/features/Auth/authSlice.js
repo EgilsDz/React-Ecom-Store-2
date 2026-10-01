@@ -31,6 +31,11 @@ export const loginUser = createAsyncThunk(
             firstName: foundUsers[0].firstName,
             lastName: foundUsers[0].lastName,
             email: foundUsers[0].email,
+            phoneNumber: foundUsers[0].phoneNumber,
+            country: foundUsers[0].country,
+            city: foundUsers[0].city,
+            address: foundUsers[0].address,
+            postalCode: foundUsers[0].postalCode,
         }
 
         localStorage.setItem("currentUser", JSON.stringify(authUser))

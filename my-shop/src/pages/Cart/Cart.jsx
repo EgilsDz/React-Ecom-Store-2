@@ -17,7 +17,7 @@ const images = import.meta.glob(
 
 
 function Cart() {
-
+    const currentUser = useSelector((state) => state.auth.currentUser)
     const cart = useSelector((state) => state.cart)
     const dispatch = useDispatch();
     return (
@@ -104,8 +104,11 @@ function Cart() {
                                         sx={CartStyles.CartBtn}
                                         onClick={() =>
                                             dispatch(
-                                                decreaseQuantity(
-                                                    cartitems.id
+                                                decreaseQuantity({
+                                                    id: cartitems.id,
+                                                    userId: currentUser ? currentUser.id : "guest"
+                                                }
+
                                                 )
                                             )
                                         }
@@ -124,8 +127,10 @@ function Cart() {
                                         sx={CartStyles.CartBtn}
                                         onClick={() =>
                                             dispatch(
-                                                increaseQuantity(
-                                                    cartitems.id
+                                                increaseQuantity({
+                                                    id: cartitems.id,
+                                                    userId: currentUser ? currentUser.id : "guest"
+                                                }
                                                 )
                                             )
                                         }
@@ -144,6 +149,11 @@ function Cart() {
                         </Card>
                     )
                 })}
+
+
+                <Button variant="outlined" component={Link} to="/checkout" >
+                    To CheckOut
+                </Button>
                 <Footer />
             </Box>
         )

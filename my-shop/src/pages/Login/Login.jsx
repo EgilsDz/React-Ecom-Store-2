@@ -10,12 +10,12 @@ import { loginUser } from "../../features/Auth/authSlice"
 
 function Login() {
     const dispatch = useDispatch()
-    const navigate = useNavigate();
+    const navigate = useNavigate()
     const initialLoginData = {
         email: "",
         password: "",
     }
-    const [loginData, setLoginData] = useState(initialLoginData);
+    const [loginData, setLoginData] = useState(initialLoginData)
     const [modalOpen, setModalOpen] = useState(false)
     const [modalMessage, setModalMessage] = useState("")
 

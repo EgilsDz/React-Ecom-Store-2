@@ -422,7 +422,7 @@
       "id": "23",
       "title": "Wireless Headphones",
       "category": "audio",
-      "price": 299.99,
+      "price": "399.99",
       "image": "",
       "short_description": " Comfortable wireless headphones with immersive sound.",
       "long_description": "These wireless headphones provide rich audio, active noise cancellation, comfortable ear cushions, and long battery life.",
@@ -576,14 +576,14 @@
       "firstName": "Jim",
       "lastName": "Carry",
       "email": "JimCarry@gmail.com",
-      "password": "123456789",
+      "password": "1234",
       "confirmPassword": "123456789",
       "id": "RiWNCeU-iSk",
-      "phoneNumber": "123456",
+      "phoneNumber": "20084341",
       "country": "Latvia",
-      "city": "Riga",
-      "address": "Origo",
-      "postalCode": "LV-3457"
+      "city": "Jelgava",
+      "address": "Liela iela 12B",
+      "postalCode": "LV-3452"
     },
     {
       "firstName": "Jim",
@@ -639,6 +639,136 @@
       "city": "",
       "address": "",
       "postalCode": ""
+    }
+  ],
+  "orders": [
+    {
+      "orderId": 464146763,
+      "userId": "RiWNCeU-iSk",
+      "items": [
+        {
+          "productId": "2",
+          "quantity": 2,
+          "priceAtPurchase": 899.99
+        },
+        {
+          "productId": "6",
+          "quantity": 1,
+          "priceAtPurchase": 399.99
+        }
+      ],
+      "deliveryInfo": {
+        "firstName": "Jim",
+        "lastName": "Carry",
+        "addressOne": "Liela iela 12",
+        "addressTwo": "A34",
+        "country": "Latvia",
+        "city": "Jelgava",
+        "postalCode": "LV-3454",
+        "phoneNumber": "20084341",
+        "email": "BarryL@gmail.com"
+      },
+      "totalPrice": 2199.9700000000003,
+      "paymentMethod": "paypal",
+      "status": "Processing",
+      "createdAt": "2026-09-29T14:58:55.410Z",
+      "id": "ademqO5fAQw"
+    },
+    {
+      "orderId": 164005693,
+      "userId": "RiWNCeU-iSk",
+      "items": [
+        {
+          "productId": "2",
+          "quantity": 2,
+          "priceAtPurchase": 899.99
+        },
+        {
+          "productId": "6",
+          "quantity": 1,
+          "priceAtPurchase": 399.99
+        }
+      ],
+      "deliveryInfo": {
+        "firstName": "Barry",
+        "lastName": "Carry",
+        "addressOne": "Liela iela 12",
+        "addressTwo": "A376",
+        "country": "Germany",
+        "city": "Jelgava",
+        "postalCode": "LV-3454",
+        "phoneNumber": "20084341",
+        "email": "JanisB@gmail.com"
+      },
+      "totalPrice": 2199.97,
+      "paymentMethod": "card",
+      "status": "Processing",
+      "createdAt": "2026-10-01T10:41:24.029Z",
+      "id": "NR7xUowvqM4"
+    },
+    {
+      "orderId": 607855942,
+      "userId": "RiWNCeU-iSk",
+      "items": [
+        {
+          "productId": "2",
+          "quantity": 2,
+          "priceAtPurchase": 899.99
+        },
+        {
+          "productId": "6",
+          "quantity": 1,
+          "priceAtPurchase": 399.99
+        }
+      ],
+      "deliveryInfo": {
+        "firstName": "",
+        "lastName": "",
+        "addressOne": "",
+        "addressTwo": "",
+        "country": "",
+        "city": "",
+        "postalCode": "",
+        "phoneNumber": "",
+        "email": ""
+      },
+      "totalPrice": 2199.97,
+      "paymentMethod": "card",
+      "status": "Processing",
+      "createdAt": "2026-10-01T10:43:25.631Z",
+      "id": "fCJiF69lrUc"
+    },
+    {
+      "orderId": 607855942,
+      "userId": "RiWNCeU-iSk",
+      "items": [
+        {
+          "productId": "2",
+          "quantity": 2,
+          "priceAtPurchase": 899.99
+        },
+        {
+          "productId": "6",
+          "quantity": 1,
+          "priceAtPurchase": 399.99
+        }
+      ],
+      "deliveryInfo": {
+        "firstName": "",
+        "lastName": "",
+        "addressOne": "",
+        "addressTwo": "",
+        "country": "",
+        "city": "",
+        "postalCode": "",
+        "phoneNumber": "",
+        "email": ""
+      },
+      "totalPrice": 2199.97,
+      "paymentMethod": "card",
+      "status": "Processing",
+      "createdAt": "2026-10-01T10:43:25.635Z",
+      "id": "NesvmSTgXU4"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

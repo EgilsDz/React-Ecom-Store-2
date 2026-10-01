@@ -6,6 +6,8 @@ import Category from "./pages/Category/Category"
 import Details from "./pages/Details/Details"
 import Login from "./pages/Login/Login"
 import Register from "./pages/Register/Register"
+import Checkout from "./pages/Checkout/Checkout"
+import Confirmation from "./pages/Confirmation/Confirmation"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Profile from "./pages/Profile/Profile"
 import ProtectedRoute from "./components/ProtectedRoute"
@@ -25,6 +27,8 @@ function App() {
         <Route path="/category" element={<Category />} />
         <Route path="/details/:id" element={<Details />} />
         <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/confirmation" element={<Confirmation />} />
       </Routes>
     </BrowserRouter>
   )
