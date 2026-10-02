@@ -3,7 +3,6 @@ import { ReviewStyles } from "./ReviewStyles"
 
 
 function Review({ handleBack, handleNext, shippingData, billingData, paymentMethod }) {
-    console.log(shippingData)
     return (
         <form style={ReviewStyles.shippingContainer}>
             <Card sx={ReviewStyles.shippingContainer}>
@@ -21,9 +20,19 @@ function Review({ handleBack, handleNext, shippingData, billingData, paymentMeth
                     </Box>
                     <Typography sx={ReviewStyles.infoTitle}>Payment information:</Typography>
                     <Box sx={ReviewStyles.info}>
-                        <Typography>Payment Method: {paymentMethod}</Typography>
-                        <Typography>CardHolder Name: {billingData.cardName}</Typography>
-                        <Typography>Card ending in ****{billingData.cardNumber.slice(-4)}</Typography>
+                        {paymentMethod === "paypal" ? (
+                            <>
+                                <Typography>Payment Method: {paymentMethod}</Typography>
+                            </>
+                        ) : (
+                            <>
+
+                                <Typography>Payment Method: {paymentMethod}</Typography>
+                                <Typography>CardHolder Name: {billingData.cardName}</Typography>
+                                <Typography>Card ending in ****{billingData.cardNumber.slice(-4)}</Typography>
+                            </>
+
+                        )}
                     </Box>
 
 

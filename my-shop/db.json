@@ -569,6 +569,19 @@
         "HDMI connectivity",
         "Adjustable stand"
       ]
+    },
+    {
+      "title": "HP EliteBook",
+      "short_description": "computer",
+      "long_description": "coputer",
+      "price": "123",
+      "year": "2077",
+      "RAM": "12",
+      "warranty_period": "12 ",
+      "image": "",
+      "features": [],
+      "id": "FaIi4bsS0yI",
+      "category": "laptops"
     }
   ],
   "users": [
@@ -639,6 +652,13 @@
       "city": "",
       "address": "",
       "postalCode": ""
+    },
+    {
+      "firstName": "Tarry",
+      "lastName": "Lielais",
+      "email": "TL@gmail.com",
+      "password": "123",
+      "id": "KwqeoDBR4jk"
     }
   ],
   "orders": [
@@ -702,73 +722,117 @@
       },
       "totalPrice": 2199.97,
       "paymentMethod": "card",
-      "status": "Processing",
+      "status": "Shipped",
       "createdAt": "2026-10-01T10:41:24.029Z",
       "id": "NR7xUowvqM4"
     },
     {
-      "orderId": 607855942,
+      "orderId": 265452832,
       "userId": "RiWNCeU-iSk",
       "items": [
         {
-          "productId": "2",
+          "productId": "1",
           "quantity": 2,
-          "priceAtPurchase": 899.99
-        },
-        {
-          "productId": "6",
-          "quantity": 1,
-          "priceAtPurchase": 399.99
+          "priceAtPurchase": 199.99
         }
       ],
       "deliveryInfo": {
-        "firstName": "",
-        "lastName": "",
-        "addressOne": "",
-        "addressTwo": "",
-        "country": "",
-        "city": "",
-        "postalCode": "",
-        "phoneNumber": "",
-        "email": ""
+        "firstName": "Jim",
+        "lastName": "Carry",
+        "addressOne": "Liela iela 12",
+        "addressTwo": "A376",
+        "country": "Latvia",
+        "city": "Jelgava",
+        "postalCode": "LV-3454",
+        "phoneNumber": "20084341",
+        "email": "JanisB@gmail.com"
       },
-      "totalPrice": 2199.97,
-      "paymentMethod": "card",
-      "status": "Processing",
-      "createdAt": "2026-10-01T10:43:25.631Z",
-      "id": "fCJiF69lrUc"
+      "totalPrice": 399.98,
+      "paymentMethod": "paypal",
+      "status": "Delivered",
+      "createdAt": "2026-10-01T13:41:11.977Z",
+      "id": "Cs_nq6C02iA"
     },
     {
-      "orderId": 607855942,
+      "orderId": 567782560,
+      "userId": "RiWNCeU-iSk",
+      "items": [
+        {
+          "productId": "9",
+          "quantity": 1,
+          "priceAtPurchase": 1499.99
+        }
+      ],
+      "deliveryInfo": {
+        "firstName": "Jim",
+        "lastName": "Carry",
+        "email": "JimCarry@gmail.com",
+        "phoneNumber": "20084341",
+        "country": "Latvia",
+        "city": "Jelgava",
+        "addressOne": "Liela iela 12B",
+        "postalCode": "LV-3452",
+        "addressTwo": "A376"
+      },
+      "totalPrice": 1499.99,
+      "paymentMethod": "paypal",
+      "status": "Processing",
+      "createdAt": "2026-10-02T12:54:01.379Z",
+      "id": "pEIzSf3lzOE"
+    },
+    {
+      "orderId": 457664693,
       "userId": "RiWNCeU-iSk",
       "items": [
         {
           "productId": "2",
           "quantity": 2,
           "priceAtPurchase": 899.99
-        },
-        {
-          "productId": "6",
-          "quantity": 1,
-          "priceAtPurchase": 399.99
         }
       ],
       "deliveryInfo": {
-        "firstName": "",
-        "lastName": "",
-        "addressOne": "",
-        "addressTwo": "",
-        "country": "",
-        "city": "",
-        "postalCode": "",
-        "phoneNumber": "",
-        "email": ""
+        "firstName": "Jim",
+        "lastName": "Carry",
+        "email": "JimCarry@gmail.com",
+        "phoneNumber": "20084341",
+        "country": "Latvia",
+        "city": "Jelgava",
+        "addressOne": "Liela iela 12B",
+        "postalCode": "LV-3452",
+        "addressTwo": "A376"
       },
-      "totalPrice": 2199.97,
-      "paymentMethod": "card",
+      "totalPrice": 1799.98,
+      "paymentMethod": "paypal",
       "status": "Processing",
-      "createdAt": "2026-10-01T10:43:25.635Z",
-      "id": "NesvmSTgXU4"
+      "createdAt": "2026-10-02T12:57:44.638Z",
+      "id": "XatXF_ocP3s"
+    },
+    {
+      "orderId": 702409059,
+      "userId": "RiWNCeU-iSk",
+      "items": [
+        {
+          "productId": "9",
+          "quantity": 1,
+          "priceAtPurchase": 1499.99
+        }
+      ],
+      "deliveryInfo": {
+        "firstName": "Jim",
+        "lastName": "Carry",
+        "email": "JimCarry@gmail.com",
+        "phoneNumber": "20084341",
+        "country": "Latvia",
+        "city": "Jelgava",
+        "addressOne": "Liela iela 12B",
+        "postalCode": "LV-3452",
+        "addressTwo": "A376"
+      },
+      "totalPrice": 1499.99,
+      "paymentMethod": "paypal",
+      "status": "Processing",
+      "createdAt": "2026-10-02T13:04:49.735Z",
+      "id": "ceoAMw6NwNk"
     }
   ],
   "$schema": "./node_modules/json-server/schema.json"

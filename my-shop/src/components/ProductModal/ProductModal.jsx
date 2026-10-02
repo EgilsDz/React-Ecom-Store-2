@@ -1,8 +1,10 @@
-import { Button, Box, TextField, Modal } from "@mui/material"
+import { Button, Box, TextField, Modal, Select, MenuItem, InputLabel, FormControl } from "@mui/material"
 import { ProductModalStyles } from "./ProductModalStyles"
 import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { addProducts, editProducts } from "../../features/products/productsSlice";
+import categoryData from "../../data/categoryData"
+
 
 
 
@@ -19,6 +21,7 @@ function ProductModal({ open, onClose, selectedProduct }) {
         warranty_period: selectedProduct?.warranty_period || "",
         image: selectedProduct?.image || "",
         features: selectedProduct?.features || [],
+        category: selectedProduct?.category || "",
     });
 
     const isEditing = !!selectedProduct
@@ -94,6 +97,25 @@ function ProductModal({ open, onClose, selectedProduct }) {
                             warranty_period: e.target.value
                         })
                     } value={formData.warranty_period} variant="filled" sx={ProductModalStyles.modalTextBox} />
+                    <FormControl variant="filled" sx={ProductModalStyles.categorySelect}>
+                        <InputLabel shrink>Category</InputLabel>
+
+                        <Select
+                            value={formData.category}
+                            onChange={(e) =>
+                                setFormData({
+                                    ...formData,
+                                    category: e.target.value
+                                })
+                            }
+                        >
+                            {categoryData.map((category) => (
+                                <MenuItem key={category.id} value={category.category}>
+                                    {category.title}
+                                </MenuItem>
+                            ))}
+                        </Select>
+                    </FormControl>
                 </Box>
                 <Box sx={ProductModalStyles.modalBtnContainer}>
                     <Button variant="outlined" onClick={handleClose}>CANCEL</Button>

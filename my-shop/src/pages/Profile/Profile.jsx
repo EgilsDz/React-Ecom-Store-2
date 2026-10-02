@@ -1,6 +1,7 @@
 import { useSelector, useDispatch } from "react-redux"
 import Navbar from "../../components/Navbar"
 import Footer from "../../components/Footer"
+import MyOrders from "../../components/MyOrders/MyOrders"
 import { Box, Card, CardContent, Typography, Button, CardMedia } from "@mui/material"
 import { profileStyles } from "./profileStyles"
 import Profilepic from "../../assets/images/profilePic.png"
@@ -118,8 +119,8 @@ function Profile() {
                     <Card sx={profileStyles.card}>
                         <CardContent sx={profileStyles.cardcontent}>
                             <Typography variant="h3" sx={profileStyles.title}>My Orders</Typography>
-                            <Box sx={profileStyles.info}>
-                                <Typography >Order #212 : status shipped</Typography>
+                            <Box sx={{ width: "100%" }}>
+                                <MyOrders />
                             </Box>
                         </CardContent>
                     </Card>

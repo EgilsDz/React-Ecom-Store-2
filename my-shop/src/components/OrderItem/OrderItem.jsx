@@ -2,7 +2,7 @@ import { Box, Card, CardContent, Typography, Skeleton, IconButton } from "@mui/m
 import CloseSharpIcon from '@mui/icons-material/CloseSharp';
 import { OrderItemStyles } from "./OrderItemStyles";
 
-function OrderItem({ cartItem }) {
+function OrderItem({ cartItem, handleRemove }) {
 
     const images = import.meta.glob(
         "../../assets/images/product_images/*.png",
@@ -14,6 +14,7 @@ function OrderItem({ cartItem }) {
     )
 
     const itemTotal = cartItem.price * cartItem.quantity
+    const itemId = cartItem.id
 
     const imagePath =
         images[
@@ -51,10 +52,10 @@ function OrderItem({ cartItem }) {
                         <Box sx={OrderItemStyles.quantityBox}>
                             <Typography sx={OrderItemStyles.quantity}>Qty {cartItem.quantity}</Typography>
                         </Box>
-                        <Typography sx={OrderItemStyles.price}>€{itemTotal}</Typography>
+                        <Typography sx={OrderItemStyles.price}>€{itemTotal.toFixed(2)}</Typography>
                     </Box>
                     <Box>
-                        <IconButton>
+                        <IconButton onClick={() => { handleRemove(itemId) }}>
                             <CloseSharpIcon />
                         </IconButton>
                     </Box>

@@ -11,7 +11,7 @@ import Confirmation from "./pages/Confirmation/Confirmation"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 import Profile from "./pages/Profile/Profile"
 import ProtectedRoute from "./components/ProtectedRoute"
-
+//import CheckoutRoute from "./components/CheckoutRoute"
 
 
 function App() {

@@ -1,8 +1,45 @@
 import { ShippingFormStyles } from "./ShippingFormStyles"
+import { useState, useEffect } from "react"
 import { Card, CardContent, Box, Button, TextField, Typography, FormControlLabel, FormGroup, Checkbox } from "@mui/material"
+import { useSelector } from "react-redux"
 
 function ShippingForm({ handleNext, shippingData, setShippingData }) {
 
+
+    const { currentUser } = useSelector((state) => state.auth)
+    const [useProfileInfo, setUseProfileInfo] = useState(false)
+
+    useEffect(() => {
+        if (useProfileInfo) {
+            const profileData = {
+                firstName: currentUser?.firstName || "",
+                lastName: currentUser?.lastName || "",
+                email: currentUser?.email || "",
+                phoneNumber: currentUser?.phoneNumber || "",
+                country: currentUser?.country || "",
+                city: currentUser?.city || "",
+                addressOne: currentUser?.address || "",
+                postalCode: currentUser?.postalCode || "",
+                addressTwo: "",
+            }
+            setShippingData(profileData)
+        } else {
+            const initialProfileData = {
+                firstName: "",
+                lastName: "",
+                email: "",
+                phoneNumber: "",
+                country: "",
+                city: "",
+                addressOne: "",
+                postalCode: "",
+                addressTwo: "",
+
+            }
+            setShippingData(initialProfileData)
+        }
+    },
+        [useProfileInfo, currentUser])
 
     const handleChange = (e) => {
         setShippingData({
@@ -110,7 +147,7 @@ function ShippingForm({ handleNext, shippingData, setShippingData }) {
                         type="email"
                     />
                     <FormGroup>
-                        <FormControlLabel control={<Checkbox defaultChecked />} label="Use profile information" />
+                        <FormControlLabel control={<Checkbox onChange={() => setUseProfileInfo(!useProfileInfo)} />} label="Use profile information" />
                     </FormGroup>
                     <Button sx={ShippingFormStyles.btn}
                         type="submit" variant="contained">Continue to Billing Information</Button>

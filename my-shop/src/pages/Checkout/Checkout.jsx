@@ -12,7 +12,8 @@ import { useSelector, useDispatch } from "react-redux"
 import { checkoutStyles } from "./checkoutStyles"
 import { useNavigate } from "react-router-dom"
 import { createOrder } from "../../features/Checkout/checkoutSlice"
-import { clearCart } from "../../features/cart/cartSlice"
+import { clearCart, removeItem } from "../../features/cart/cartSlice"
+
 
 
 
@@ -55,9 +56,17 @@ function Checkout() {
     }
     const [orderId] = useState(generateOrderId)
 
+    const handleRemove = (itemId) => {
+        const userId = auth.currentUser.id
 
+        dispatch(removeItem({
+            id: itemId,
+            userId,
+        }))
+    }
     useEffect(() => {
-        if (isPaid) {
+        console.log("i shot first hi hi - createorder");
+        if (isPaid && activeStep === 3) {
             async function CreateOrder() {
                 const orderItems = cart.cartItems.map((cartItem) =>
                 ({
@@ -85,11 +94,19 @@ function Checkout() {
                         orderId
                     }
                 })
+
             }
             CreateOrder()
 
         }
-    }, [isPaid])
+    }, [isPaid, activeStep])
+
+    useEffect(() => {
+        if (cart.cartItems.length === 0 && !isPaid) {
+            console.log("i shot first hi hi - guardrails");
+            navigate("/cart")
+        }
+    }, [cart.cartItems.length, isPaid])
     return (
         <>
             <Navbar />
@@ -154,6 +171,7 @@ function Checkout() {
                                 <OrderItem
                                     key={cartItem.id}
                                     cartItem={cartItem}
+                                    handleRemove={handleRemove}
                                 />
                             ))}
                         </CardContent>

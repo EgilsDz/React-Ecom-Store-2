@@ -162,5 +162,9 @@ export const CartStyles = {
             xs: "100%",
             md: "auto",
         },
+    },
+
+    btn: {
+        mb: 5
     }
 }

@@ -50,6 +50,10 @@ export const ProductModalStyles = {
         display: "flex",
         gap: "10px",
         justifyContent: "center",
+    },
+
+    categorySelect: {
+        width: "70%",
     }
 
 

@@ -102,10 +102,24 @@ const cartSlice = createSlice({
             state.amount = 0
             state.total = 0
             saveCart(state, userId)
-        }
+        },
 
+        removeItem(state, action) {
+            const productId = action.payload.id
+            const userId = action.payload.userId
+            const cartItem = state.cartItems.find(
+                (cartItem) => cartItem.id === productId
+            )
+            const cartItemIndex = state.cartItems.findIndex(
+                (cartItem) => cartItem.id === productId
+            )
+            state.cartItems.splice(cartItemIndex, 1)
+            state.amount -= cartItem.quantity
+            state.total -= cartItem.price * cartItem.quantity
+            saveCart(state, userId)
+        }
     },
 })
 
 export default cartSlice.reducer
-export const { addToCart, increaseQuantity, decreaseQuantity, loadUserCart, clearCart } = cartSlice.actions
+export const { addToCart, increaseQuantity, decreaseQuantity, loadUserCart, clearCart, removeItem } = cartSlice.actions

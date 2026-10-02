@@ -27,6 +27,9 @@ const checkoutSlice = createSlice({
         markPayment(state) {
             state.isPaid = true
         },
+        resetPayment(state) {
+            state.isPaid = false
+        },
 
     },
     extraReducers: (builder) => {
@@ -47,4 +50,4 @@ const checkoutSlice = createSlice({
 })
 
 export default checkoutSlice.reducer
-export const { markPayment } = checkoutSlice.actions
+export const { markPayment, resetPayment } = checkoutSlice.actions

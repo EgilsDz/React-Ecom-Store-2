@@ -5,6 +5,8 @@ import { Link } from "react-router-dom"
 import { CartStyles } from "./CartStyles"
 import { useSelector, useDispatch } from "react-redux"
 import { decreaseQuantity, increaseQuantity } from "../../features/cart/cartSlice"
+import { resetPayment } from "../../features/Checkout/checkoutSlice"
+import { useNavigate } from "react-router-dom"
 
 const images = import.meta.glob(
     "../../assets/images/product_images/*.png",
@@ -19,7 +21,13 @@ const images = import.meta.glob(
 function Cart() {
     const currentUser = useSelector((state) => state.auth.currentUser)
     const cart = useSelector((state) => state.cart)
-    const dispatch = useDispatch();
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
+
+    const handleNavigate = () => {
+        dispatch(resetPayment())
+        navigate("/checkout")
+    }
     return (
         cart.cartItems.length === 0 ? (<Box>
             <Navbar />
@@ -151,7 +159,7 @@ function Cart() {
                 })}
 
 
-                <Button variant="outlined" component={Link} to="/checkout" >
+                <Button variant="outlined" onClick={handleNavigate} sx={CartStyles.btn} >
                     To CheckOut
                 </Button>
                 <Footer />
