@@ -26,7 +26,7 @@ export const addProducts = createAsyncThunk(
 export const fetchProducts = createAsyncThunk(
     "products/fetchProducts",
     async () => {
-        const response = await fetch(`http://localhost:5165/api/products`)
+        const response = await fetch(`http://localhost:3000/products`)
         if (!response.ok) {
             return console.log("beep")
         }
